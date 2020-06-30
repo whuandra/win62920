@@ -8,8 +8,8 @@ resource "aws_s3_bucket" "winbucket" {
   
 }
 
-resource "aws_s3_bucket" "winbucket" {
-    bucket = "winoto62920B"
+resource "aws_s3_bucket" "winfolder" {
+    bucket = "winoto62920evening"
     acl = "public-read"
   
 }
