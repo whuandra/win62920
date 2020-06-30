@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "winbucket" {
   
 }
 
-resource "aws_s3_bucket" "winbucket2" {
+resource "aws_s3_bucket" "winbucket" {
     bucket = "winoto62920B"
     acl = "public-read"
   
