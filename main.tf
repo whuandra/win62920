@@ -13,3 +13,8 @@ resource "aws_s3_bucket" "winfolder" {
     acl = "public-read"
   
 }
+
+resource "aws_s3_bucket" "winfolder2"{
+    bucket = "winoto62920eve2"
+    acl = "public-read"
+}
