@@ -3,7 +3,5 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "winfolder" {
-    bucket = "winoto62920evening"
-    acl = "public-read"
-  
+    bucket = "winoto62920evening"  
 }
