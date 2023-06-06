@@ -3,7 +3,6 @@ provider "aws" {
 }
 
 variable "aws_resources" {
-    type = "map"
     default = {
         keyname = "key41220good"
     }
