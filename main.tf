@@ -10,7 +10,7 @@ variable "aws_resources" {
 
 resource "aws_instance" "Windows" {
     ami = "ami-0ab05a04b66a879af"
-    instance_type = "m5.2xlarge"
+    instance_type = "m6i.2xlarge"
     key_name = lookup(var.aws_resources, "keyname")
     
     tags = {
