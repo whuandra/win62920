@@ -7,7 +7,7 @@ variable "aws_resources" {
         keyname = "key41220good"
     }
 }
-
+/*
 resource "aws_instance" "Windows" {
     ami = "ami-0ab05a04b66a879af"
     instance_type = "m4.2xlarge"
@@ -17,5 +17,5 @@ resource "aws_instance" "Windows" {
         Name = "Test Server"
     }
 }
-   
+*/   
     
