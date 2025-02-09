@@ -60,7 +60,7 @@ resource "aws_route53_record" "simple" {
   type    = "A"
   ttl     = 300
   records = ["192.0.0.3"]
-
+set_identifier = "simpledev"
 weighted_routing_policy {
     weight = 50
   }
@@ -72,7 +72,7 @@ resource "aws_route53_record" "simple2" {
   type    = "A"
   ttl     = 300
   records = ["192.0.0.4"]
-
+set_identifier = "simpleprod"
 weighted_routing_policy {
     weight = 60
   }
