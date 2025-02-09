@@ -18,4 +18,6 @@ resource "aws_instance" "Windows" {
     }
 }
 */   
-    
+resource "aws_route53_zone" "example_zone" {
+name = "example.com"
+}    
