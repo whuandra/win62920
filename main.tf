@@ -53,3 +53,11 @@ resource "aws_route53_record" "joinme2" {
   records = ["192.0.2.2"]
   ttl     = 300
 }
+
+resource "aws_route53_record" "simple" {
+  zone_id = aws_route53_zone.aws3.zone_id
+  name    = "simple.aws3.winoto.com"
+  type    = "A"
+  ttl     = 300
+  records = [192.0.0.3]
+}
