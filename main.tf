@@ -8,6 +8,9 @@ variable "aws_resources" {
     }
 }
 /*
+
+
+
 resource "aws_instance" "Windows" {
     ami = "ami-0ab05a04b66a879af"
     instance_type = "m4.2xlarge"
@@ -17,9 +20,14 @@ resource "aws_instance" "Windows" {
         Name = "Test Server"
     }
 }
-*/   
+*/
+
+resource "aws_route53_zone" "aws3" {
+  name = "aws3.winoto.com"
+}
+
 resource "aws_route53_record" "joinme1" {
-  zone_id = "aws2.winoto.com"
+  zone_id = aws_route53_zone.aws3.zone.id
   name    = "joinme.aws2.winoto.com"
   type    = "A"
 
@@ -33,7 +41,7 @@ resource "aws_route53_record" "joinme1" {
 }
 
 resource "aws_route53_record" "joinme2" {
-  zone_id = "aws2.winoto.com"
+  zone_id = aws_route53_zone.aws3.zone.id
   name    = "joinme.aws2.winoto.com"
   type    = "A"
 
