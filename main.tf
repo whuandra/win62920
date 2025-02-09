@@ -60,4 +60,20 @@ resource "aws_route53_record" "simple" {
   type    = "A"
   ttl     = 300
   records = ["192.0.0.3"]
+
+weighted_routing_policy {
+    weight = 50
+  }
+}
+
+resource "aws_route53_record" "simple2" {
+  zone_id = aws_route53_zone.aws3.zone_id
+  name    = "simple.aws3.winoto.com"
+  type    = "A"
+  ttl     = 300
+  records = ["192.0.0.4"]
+
+weighted_routing_policy {
+    weight = 60
+  }
 }
