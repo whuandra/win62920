@@ -26,7 +26,8 @@ resource "aws_route53_record" "joinme1" {
   weighted_routing_policy {
     weight = 100
   }
-
+  set_identifier = "joinmeprod"
+  
   records = ["192.0.2.1"]
   ttl     = 300
 }
@@ -39,7 +40,8 @@ resource "aws_route53_record" "joinme2" {
   weighted_routing_policy {
     weight = 50
   }
-
+  set_identifier = "joinmedev"
+  
   records = ["192.0.2.2"]
   ttl     = 300
 }
