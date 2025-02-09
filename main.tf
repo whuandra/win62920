@@ -19,7 +19,7 @@ resource "aws_instance" "Windows" {
 }
 */   
 resource "aws_route53_record" "joinme1" {
-  zone_id = aws2.winoto.com
+  zone_id = "aws2.winoto.com"
   name    = "joinme.aws2.winoto.com"
   type    = "A"
 
@@ -32,7 +32,7 @@ resource "aws_route53_record" "joinme1" {
 }
 
 resource "aws_route53_record" "joinme2" {
-  zone_id = aws2.winoto.com
+  zone_id = "aws2.winoto.com"
   name    = "joinme.aws2.winoto.com"
   type    = "A"
 
