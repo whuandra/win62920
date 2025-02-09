@@ -27,7 +27,7 @@ resource "aws_route53_zone" "aws3" {
 }
 
 resource "aws_route53_record" "joinme1" {
-  zone_id = aws_route53_zone.aws3.zone.id
+  zone_id = aws_route53_zone.aws3.zone_id
   name    = "joinme.aws2.winoto.com"
   type    = "A"
 
@@ -41,7 +41,7 @@ resource "aws_route53_record" "joinme1" {
 }
 
 resource "aws_route53_record" "joinme2" {
-  zone_id = aws_route53_zone.aws3.zone.id
+  zone_id = aws_route53_zone.aws3.zone_id
   name    = "joinme.aws2.winoto.com"
   type    = "A"
 
