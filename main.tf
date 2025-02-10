@@ -76,6 +76,7 @@ weighted_routing_policy {
   }
 }
 */
+/*
 //creating simple policy
 resource "aws_route53_record" "simple" {
   zone_id = aws_route53_zone.aws3.zone_id
@@ -84,4 +85,5 @@ resource "aws_route53_record" "simple" {
   ttl     = 300
   records = ["192.0.0.3"]
 }
+*/
 
