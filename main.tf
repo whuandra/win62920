@@ -8,9 +8,6 @@ variable "aws_resources" {
     }
 }
 /*
-
-
-
 resource "aws_instance" "Windows" {
     ami = "ami-0ab05a04b66a879af"
     instance_type = "m4.2xlarge"
