@@ -1,7 +1,6 @@
 provider "aws" {
     region = "us-east-1"
 }
-
 variable "aws_resources" {
     default = {
         keyname = "key41220good"
@@ -63,7 +62,8 @@ weighted_routing_policy {
     weight = 50
   }
 }
-
+*/
+/*
 resource "aws_route53_record" "simple2" {
   zone_id = aws_route53_zone.aws3.zone_id
   name    = "simple.aws3.winoto.com"
