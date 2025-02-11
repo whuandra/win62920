@@ -50,7 +50,7 @@ resource "aws_route53_record" "joinme2" {
   ttl     = 300
 }
 */
-/*
+
 resource "aws_route53_record" "simple" {
   zone_id = aws_route53_zone.aws3.zone_id
   name    = "simple.aws3.winoto.com"
@@ -75,7 +75,7 @@ weighted_routing_policy {
     weight = 60
   }
 }
-*/
+
 /*
 //creating simple policy
 resource "aws_route53_record" "simple" {
@@ -86,7 +86,7 @@ resource "aws_route53_record" "simple" {
   records = ["192.0.0.3"]
 }
 */
-
+/*
 resource "aws_route53_record" "simple" {
   zone_id = aws_route53_zone.aws3.zone_id
   name    = "simple.aws3.winoto.com"
@@ -98,6 +98,8 @@ latency_routing_policy {
     region = "us-east-1"
   }
 }
+*/
+/*
 resource "aws_route53_record" "simple2" {
   zone_id = aws_route53_zone.aws3.zone_id
   name    = "simple.aws3.winoto.com"
@@ -109,8 +111,8 @@ latency_routing_policy {
     region = "us-west-1"
   }
 }
-
-
+*/
+/*
 resource "aws_route53_record" "late1" {
   zone_id = aws_route53_zone.aws3.zone_id
   name    = "late.aws3.winoto.com"
@@ -123,7 +125,8 @@ latency_routing_policy {
   }
 }
 
-
+*/
+/*
 resource "aws_route53_record" "late2" {
   zone_id = aws_route53_zone.aws3.zone_id
   name    = "late.aws3.winoto.com"
@@ -135,3 +138,4 @@ latency_routing_policy {
     region = "us-east-1"
   }
 }
+*/
