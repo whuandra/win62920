@@ -52,7 +52,7 @@ resource "aws_route53_record" "joinme2" {
 */
 
 
-/*
+
 resource "aws_route53_record" "simple" {
   zone_id = aws_route53_zone.aws3.zone_id
   name    = "simple.aws3.winoto.com"
@@ -75,7 +75,7 @@ weighted_routing_policy {
     weight = 60
   }
 }
-*/
+
 /*
 //creating simple policy
 resource "aws_route53_record" "simple" {
@@ -89,12 +89,12 @@ resource "aws_route53_record" "simple" {
 */
 
 
-
+/*
 resource "aws_route53_record" "simple" {
   zone_id = aws_route53_zone.aws3.zone_id
   name    = "simple.aws3.winoto.com"
   type    = "A"
-  allow_overwrite = true
+  allow_overwrite = false
   ttl     = 300
   records = ["192.0.0.3"]
 set_identifier = "simpledev"
@@ -107,7 +107,7 @@ resource "aws_route53_record" "simple2" {
   zone_id = aws_route53_zone.aws3.zone_id
   name    = "simple.aws3.winoto.com"
   type    = "A"
-  allow_overwrite = true
+  allow_overwrite = false
   ttl     = 300
   records = ["192.0.0.4"]
 set_identifier = "simpleprod"
@@ -115,7 +115,7 @@ latency_routing_policy {
     region = "us-west-1"
   }
 }
-
+*/
 
 /*
 resource "aws_route53_record" "late1" {
