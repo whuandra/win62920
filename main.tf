@@ -81,6 +81,7 @@ weighted_routing_policy {
 resource "aws_route53_record" "simple" {
   zone_id = aws_route53_zone.aws3.zone_id
   name    = "simple.aws3.winoto.com"
+  allow_overwrite = true
   type    = "A"
   ttl     = 300
   records = ["192.0.0.3"]
