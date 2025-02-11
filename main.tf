@@ -87,3 +87,27 @@ resource "aws_route53_record" "simple" {
 }
 */
 
+resource "aws_route53_record" "late1" {
+  zone_id = aws_route53_zone.aws3.zone_id
+  name    = "late.aws3.winoto.com"
+  type    = "A"
+  ttl     = 300
+  records = ["192.0.0.10"]
+set_identifier = "latedev"
+latency_routing_policy {
+    region = "us-west-1"
+  }
+}
+
+
+resource "aws_route53_record" "late2" {
+  zone_id = aws_route53_zone.aws3.zone_id
+  name    = "late.aws3.winoto.com"
+  type    = "A"
+  ttl     = 300
+  records = ["192.0.0.11"]
+set_identifier = "lateprod"
+latency_routing_policy {
+    region = "us-east-1"
+  }
+}
