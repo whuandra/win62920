@@ -22,37 +22,6 @@ resource "aws_route53_zone" "aws3" {
   name = "aws3.winoto.com"
 }
 /*
-resource "aws_route53_record" "joinme1" {
-  zone_id = aws_route53_zone.aws3.zone_id
-  name    = "joinme.aws2.winoto.com"
-  type    = "A"
-
-  weighted_routing_policy {
-    weight = 100
-  }
-  set_identifier = "joinmeprod"
-  
-  records = ["192.0.2.1"]
-  ttl     = 300
-}
-
-resource "aws_route53_record" "joinme2" {
-  zone_id = aws_route53_zone.aws3.zone_id
-  name    = "joinme.aws2.winoto.com"
-  type    = "A"
-
-  weighted_routing_policy {
-    weight = 50
-  }
-  set_identifier = "joinmedev"
-  
-  records = ["192.0.2.2"]
-  ttl     = 300
-}
-*/
-
-
-/*
 resource "aws_route53_record" "simple" {
   zone_id = aws_route53_zone.aws3.zone_id
   name    = "simple.aws3.winoto.com"
@@ -115,8 +84,6 @@ latency_routing_policy {
     region = "us-west-1"
   }
 }
-
-
 /*
 resource "aws_route53_record" "late1" {
   zone_id = aws_route53_zone.aws3.zone_id
@@ -129,7 +96,6 @@ latency_routing_policy {
     region = "us-west-1"
   }
 }
-
 */
 /*
 resource "aws_route53_record" "late2" {
@@ -144,3 +110,19 @@ latency_routing_policy {
   }
 }
 */
+resource "aws_elb" "win-lb" {
+  name               = "win-lb21125"
+  availability_zones = ["us-east-1a"]
+
+  listener {
+    instance_port      = 443
+    instance_protocol  = "http"
+    lb_port            = 443
+    lb_protocol        = "https"
+    ssl_certificate_id = "arn:aws:acm:us-east-1:590661738553:certificate/b8a78dda-c6cd-46eb-90b5-ae5b385b55fc"
+  }
+
+  tags = {
+    Name = "win-lb21125"
+  }
+}
