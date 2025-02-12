@@ -113,7 +113,7 @@ latency_routing_policy {
 resource "aws_elb" "win-lb" {
   name               = "win-lb21125"
   availability_zones = ["us-east-1a"]
-
+ load_balancer_type = "application"
   listener {
     instance_port      = 443
     instance_protocol  = "http"
